@@ -25,7 +25,7 @@ const apiKeyMiddleware = (req, res, next) => {
 
 const fetchJson = async (endpoint, options = {}) => {
   try {
-    const response = await fetch(`${API_BASE_URL}/${endpoint}`, options);
+    const response = await fetch(`${API_BASE_URL}${endpoint}`, options);
     const data = await response.json();
     return data;
   } catch (error) {
