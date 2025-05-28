@@ -10,7 +10,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const API_BASE_URL = "https://magic-gentle-plough.glitch.me"; // Replace with your remote db.json API base URL
+// const API_BASE_URL = "https://magic-gentle-plough.glitch.me"; // Replace with your remote db.json API base URL
+const API_BASE_URL = "https://crud-restaurant-db.onrender.com/"
 const API_KEY = "86dg6qwd6g7878g0D68G97y9SF8Y9-sfgy8AD"; // Replace with your API Key
 
 const apiKeyMiddleware = (req, res, next) => {
