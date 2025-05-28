@@ -56,7 +56,7 @@ app.put("/updateRes/:id", apiKeyMiddleware, (req, res) => {
     }
 
     // Update restaurant in external JSON database
-    fetch(`https://magic-gentle-plough.glitch.me/restaurants/${restaurantId}`, {
+    fetch(`${API_BASE_URL}/restaurants/${restaurantId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -120,7 +120,7 @@ app.post("/validateToken", apiKeyMiddleware, (req, res) => {
 
 app.get("/restaurants", async (req, res) => {
   try {
-    fetch("https://magic-gentle-plough.glitch.me/restaurants")
+    fetch(`${API_BASE_URL}/restaurants`)
       .then((res) => res.json())
       .then((data) => res.status(200).json({ message: "success", data }));
   } catch (error) {
